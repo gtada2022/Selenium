@@ -26,7 +26,7 @@ public class Dsl {
 	}
 
 	public void clickRadio(String id) {
-		driver.findElement(By.id(id)).click();
+		//driver.findElement(By.id(id)).click();
 
 	}
 
