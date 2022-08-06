@@ -1,3 +1,4 @@
+package Test;
 import java.util.List;
 
 import org.junit.After;
@@ -12,9 +13,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import Page.CampoTreinamentoPage;
+
 public class TesteCampoTreinamento {
 	private WebDriver driver;
 	private Dsl dsl;
+	private CampoTreinamentoPage page;
 
 	@Before
 	public void inicializa() {
@@ -22,6 +26,7 @@ public class TesteCampoTreinamento {
 		driver.manage().window().maximize();
 		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
 		dsl = new Dsl(driver);
+		page = new CampoTreinamentoPage(driver);
 
 	}
 
@@ -146,6 +151,12 @@ public class TesteCampoTreinamento {
 
 		// driver.findElement(By.className("facilAchar")).getText());
 
+		
+	}
+	
+	@Test
+	
+	public void ClickNoBotaoTabela () {
 		
 	}
 
